@@ -7,3 +7,7 @@ logo: tower.jpg
 description: Chenguang is currently a PhD candidate in computer science.
 # show_downloads: false
 # google_analytics:
+
+collections:
+  colleagues:
+  #   output: false
