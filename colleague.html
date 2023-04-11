@@ -1,0 +1,20 @@
+---
+layout: default
+title: Staff
+---
+<h1>Colleague</h1>
+
+<ul>
+  {% assign sorted_author = site.colleagues | sort: "rank" %}
+  {% for author in sorted_author %}
+    <li>
+        {% if author.link %}
+        <h2><a href="{{ author.link }}">{{ author.name }}</a></h2>
+        {% else %}
+        <h2>{{ author.name }}</h2>
+        {% endif %}
+      <h3>{{ author.position }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
