@@ -1,0 +1,18 @@
+<nav>
+    {% for item in site.data.navigation %}
+    <li>
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+            {{ item.name }}
+        </a>
+    </li>
+    {% endfor %}
+</nav>
+<!-- 
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.title }}</a>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+</ul> -->
