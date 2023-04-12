@@ -6,8 +6,8 @@ title: Chenguang Xiao
 logo: tower.jpg
 description: Chenguang is currently a PhD candidate in computer science.
 # show_downloads: false
-# google_analytics:
+google_analytics: true
 
 collections:
   colleagues:
-  #   output: false
+    # output: false
