@@ -1,6 +1,4 @@
-# Xiao Chenguang
-
-## Introduction:
+## Introduction
 
 I am a PhD students from School of Computer Science, University of Birmingham.
 Currently, my research interests lies in the conjunction between Federated learning and class imbalance problem under the supervision of Dr. Shuo Wang.
