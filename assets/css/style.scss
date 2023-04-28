@@ -6,3 +6,9 @@
 .current {
     color: green;
   }
+
+ p a:hover, p a:focus {
+    color:rgb(0, 170, 255);
+    // font-weight: bold;
+    font-weight: normal;
+  }
