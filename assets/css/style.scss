@@ -33,3 +33,9 @@ section {
 p { text-align: justify; }
 
 html { scrollbar-gutter: stable both-edges; }
+
+@media print, screen and (max-width: 960px) {
+  section {
+    width: auto; // change
+  }
+}
