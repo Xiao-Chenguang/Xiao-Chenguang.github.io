@@ -60,6 +60,8 @@ You may want to clean up the pip folder with `rm -rf ~/.cache/pip/*` or just use
 
 Similarly, you can use `du -sh $(ls -A) | sort -h` to see the size of all folders in your home directory and clean up the large folders that you do not need any more.
 
+If you encounter a Error `Illegal variable name.` when runing `du -sh $(ls -A) | sort -h`, you can try ```du -sh `ls -A` | sort -h -k 1``` instead.
+
 ## Technique details:
 - `ln -s`: `-s` for soft link, which is a symbolic link to a file or directory.
 - `du`: short for **d**isk **u**sage, is a standard Unix/Linux command used to check the information of disk usage of files and directories on a machine.
