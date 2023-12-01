@@ -57,3 +57,54 @@ and add the following lines instead.
         self.file_writer.add_summary(ssi)
         self.file_writer.add_summary(sei)
 ```
+
+## Accessing the TB logs within python
+
+There are times we need to access the TB logs within python.
+For example, we want to plot the loss curve in the same figure as the accuracy curve.
+To access single runs, we can use the `EventAccumulator` class.
+```python
+from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
+
+# get single tb log as accumulator
+log_dir = "path/to/log"
+event_acc = EventAccumulator(log_dir).Reload()
+
+# get tags in scalars
+tags = event_acc.Tags()["scalars"]
+
+# get loged scalars
+scaler = event_acc.Scalars(tags[0])
+
+# extract values from scalars
+metric = [s.value for s in scaler]
+```
+
+To access multiple runs, we can use the `EventAccumulator` class with `glob`.
+```python
+from glob import glob
+
+
+# get multiple tb logs with glob
+fds = glob("log/to/dirs")
+events = [EventAccumulator(fd).Reload() for fd in fds]
+```
+
+Then every event in `events` is an `EventAccumulator` object, which can be accessed as previous demo.
+
+After that, `EventMultiplexer` can load multiple runs recursively in a directory as well.
+
+```python
+from tensorboard.backend.event_processing.event_multiplexer import EventMultiplexer
+
+# get multiple tb logs with multiplexer
+em = EventMultiplexer()
+em.AddRunsFromDirectory("path/to/logs").Reload()
+
+# get run and tag keys
+runs = list(em.Runs().keys())
+tags = em.Runs()[runs[0]]["scalars"]
+
+# access scalars
+scalars = em.Scalars(runs[0], tags[0])
+```
