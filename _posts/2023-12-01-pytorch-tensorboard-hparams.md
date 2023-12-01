@@ -9,7 +9,7 @@ author: Chenguang Xiao
 Tensorboard is a great tool for machine leanring process visualization.
 The key component of tensorboard is the `SummaryWriter` class.
 The writer has methods include add_scalars, add_histogram, add_image, add_embedding, add_pr_curve, add_audio, add_text, add_video, add_mesh, and add_hparams.
-![add_hparams](/_posts/figs/tb-hist.png)
+![add_hparams](/assets/images/post/tb-hist.png)
 
 The most popular method is `add_scalars`, which can be used to plot loss and accuracy curves. As well as the `add_histogram` shown above.
 After that, `add_hparams` is handy for hyperparameter tuning. In this post, I will show how to use tensorboard hparams to tune hyperparameters.
@@ -33,7 +33,7 @@ for e in range(epoch):
     writer.add_scalar('acc', np.sin(e/3), e)
 ```
 This will results in the following tensorboard hparams.
-![add_hparam](/_posts/figs/tb-hparam.png)
+![add_hparam](/assets/images/post/tb-hparam.png)
 
 However, the torch build-in tensorboard hparams is not very user-friendly for two reasons.
 1. The hparams are loged into same file as other scalars in the same run.
