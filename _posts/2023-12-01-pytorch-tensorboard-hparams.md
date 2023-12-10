@@ -41,15 +41,15 @@ However, the torch build-in tensorboard hparams is not very user-friendly for tw
 
 Thus, before running the code, make sure you made some modifications to the `env_path/lib/python3.10/site-packages/torch/utils/tensorboard/writer.py` file by commenting out the following lines. 
 ```python
-        # if not run_name:
-        #     run_name = str(time.time())
-        # logdir = os.path.join(self._get_file_writer().get_logdir(), run_name)
-        # with SummaryWriter(log_dir=logdir) as w_hp:
-        #     w_hp.file_writer.add_summary(exp)
-        #     w_hp.file_writer.add_summary(ssi)
-        #     w_hp.file_writer.add_summary(sei)
-        #     for k, v in metric_dict.items():
-        #         w_hp.add_scalar(k, v)
+# if not run_name:
+#     run_name = str(time.time())
+# logdir = os.path.join(self._get_file_writer().get_logdir(), run_name)
+# with SummaryWriter(log_dir=logdir) as w_hp:
+#     w_hp.file_writer.add_summary(exp)
+#     w_hp.file_writer.add_summary(ssi)
+#     w_hp.file_writer.add_summary(sei)
+#     for k, v in metric_dict.items():
+#         w_hp.add_scalar(k, v)
 ```
 and add the following lines instead.
 ```python
