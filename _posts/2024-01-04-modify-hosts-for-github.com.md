@@ -18,7 +18,7 @@ Then chose one or more IP addresses with the lowest latency.
 
 ## Add it to the hosts file
 The hosts file is located at `/etc/hosts` in Linux and Mac OS. You can use `sudo vim /etc/hosts` to edit it.
-Add the IP address and the domain name to the hosts file. For example, if will look like this:
+Add the IP address and the domain name to the hosts file. For example, it will look like this:
 ```
 20.205.243.166 github.com
 140.82.121.4 github.com
