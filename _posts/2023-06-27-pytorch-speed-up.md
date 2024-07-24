@@ -11,6 +11,7 @@ Contents:
 
 
 ## Dataloader (num_workers)
+Try to customize your DataSet and DataLoader following the PyTorch style to benefit from the multiprocessing.
 
 ### Number of workers (multiprocessing)
 
