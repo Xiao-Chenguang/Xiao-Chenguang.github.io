@@ -5,7 +5,7 @@ plugins:
 - jekyll-sitemap
 
 title: Chenguang Xiao
-logo: tower.jpg
+logo: photo.png
 description: Chenguang is currently a PhD candidate in computer science.
 # show_downloads: false
 google_analytics: true
