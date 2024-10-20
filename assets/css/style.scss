@@ -108,6 +108,11 @@ img {
   max-width:100%;
 }
 
+img.center {
+  display:block;
+  margin:0 auto;
+}
+
 kbd {
   background-color: #fafbfc;
   border: 1px solid #c6cbd1;
